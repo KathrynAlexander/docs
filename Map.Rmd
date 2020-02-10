@@ -1,0 +1,24 @@
+---
+title: "Map of Boston and Cambridge"
+author: "Kathryn Alexander"
+date: "2/9/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r,echo=FALSE}
+library(leaflet)
+my_map <- leaflet() %>%
+addTiles() %>%
+addMarkers(lat=42.361145, lng=	-71.057083,
+                popup="Boston, MA, USA") %>%
+addMarkers(lat=42.378036, lng=	-71.118340,
+                popup="Harvard Library, Cambridge, MA, USA")       
+
+my_map
+```
+
